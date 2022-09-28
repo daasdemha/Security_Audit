@@ -1,0 +1,32 @@
+doctype
+html(lang="en")
+
+	head
+		link(href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/flatly/bootstrap.min.css", rel="stylesheet")
+	//- --
+
+	body
+		.container
+			if !message
+				h1 No Login
+
+				//- --
+
+				p Login.
+
+				//- --
+
+				form(method="POST")
+					input(type="text", name="user", autocomplete="off")
+					input(type="password", name="pass", autocomplete="off")
+
+					//- --
+
+					input(type="submit")
+
+				//- --
+
+			else
+				p=message
+
+//- --
